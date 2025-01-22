@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmashModLoader", "SmashModLoader.csproj", "{C05B702F-FA0D-4BDD-8F51-AE3BF64823AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "..\UI\UI.csproj", "{AC9165C2-56AC-4A1F-A428-1E8845306087}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C05B702F-FA0D-4BDD-8F51-AE3BF64823AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05B702F-FA0D-4BDD-8F51-AE3BF64823AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05B702F-FA0D-4BDD-8F51-AE3BF64823AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05B702F-FA0D-4BDD-8F51-AE3BF64823AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC9165C2-56AC-4A1F-A428-1E8845306087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC9165C2-56AC-4A1F-A428-1E8845306087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC9165C2-56AC-4A1F-A428-1E8845306087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC9165C2-56AC-4A1F-A428-1E8845306087}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D42EE73-9F6E-4BEE-ADE2-53B3F84E104F}
+	EndGlobalSection
+EndGlobal
