@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|c:\\users\\jaide\\onedrive\\documents\\.projects\\smashmodloader\\ui\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|solutionrelative:ui\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|c:\\users\\jaide\\onedrive\\documents\\.projects\\smashmodloader\\ui\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|solutionrelative:ui\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|c:\\users\\jaide\\onedrive\\documents\\.projects\\smashmodloader\\ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|solutionrelative:ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|c:\\users\\jaide\\onedrive\\documents\\.projects\\smashmodloader\\ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|solutionrelative:ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|c:\\users\\jaide\\onedrive\\documents\\.projects\\smashmodloader\\ui\\ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}|UI\\UI.csproj|solutionrelative:ui\\ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UI",
+              "DocumentMoniker": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\UI.csproj",
+              "RelativeDocumentMoniker": "UI\\UI.csproj",
+              "ToolTip": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\UI.csproj",
+              "RelativeToolTip": "UI\\UI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-23T21:06:58.509Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\Form1.cs",
+              "RelativeDocumentMoniker": "UI\\Form1.cs",
+              "ToolTip": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\Form1.cs",
+              "RelativeToolTip": "UI\\Form1.cs",
+              "ViewState": "AQIAACoBAAAAAAAAAAAswDsBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T21:11:39.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\Form1.cs",
+              "RelativeDocumentMoniker": "UI\\Form1.cs",
+              "ToolTip": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\Form1.cs [Design]",
+              "RelativeToolTip": "UI\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T21:11:38.675Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SettingsForm.cs",
+              "DocumentMoniker": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SettingsForm.cs",
+              "RelativeDocumentMoniker": "UI\\SettingsForm.cs",
+              "ToolTip": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SettingsForm.cs",
+              "RelativeToolTip": "UI\\SettingsForm.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T21:06:37.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SettingsForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SettingsForm.cs",
+              "RelativeDocumentMoniker": "UI\\SettingsForm.cs",
+              "ToolTip": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SettingsForm.cs [Design]",
+              "RelativeToolTip": "UI\\SettingsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T21:06:36.101Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

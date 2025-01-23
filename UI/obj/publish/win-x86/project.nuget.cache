@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "jVvtD77zhTtcwSV8SR8QqtCgluoaVZYLW/Z9CFq7eiVu2KSJ75FwVR+/y1lCUyIAf9jMq19kQhakRmDeTY3DBA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jaide\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.2\\microsoft.netcore.app.runtime.win-x86.8.0.2.nupkg.sha512",
+    "C:\\Users\\jaide\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.2\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.2.nupkg.sha512",
+    "C:\\Users\\jaide\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.2\\microsoft.aspnetcore.app.runtime.win-x86.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
