@@ -1,9 +1,9 @@
-C:\Users\jaide\OneDrive\Desktop\New folder\UI.exe
-C:\Users\jaide\OneDrive\Desktop\New folder\UI.dll
-C:\Users\jaide\OneDrive\Desktop\New folder\UI.deps.json
-C:\Users\jaide\OneDrive\Desktop\New folder\UI.runtimeconfig.json
-C:\Users\jaide\OneDrive\Desktop\New folder\UI.dll.config
-C:\Users\jaide\OneDrive\Desktop\New folder\UI.pdb
+C:\Users\jaide\OneDrive\Desktop\New folder\SmashModLoader.exe
+C:\Users\jaide\OneDrive\Desktop\New folder\SmashModLoader.dll
+C:\Users\jaide\OneDrive\Desktop\New folder\SmashModLoader.deps.json
+C:\Users\jaide\OneDrive\Desktop\New folder\SmashModLoader.runtimeconfig.json
+C:\Users\jaide\OneDrive\Desktop\New folder\SmashModLoader.dll.config
+C:\Users\jaide\OneDrive\Desktop\New folder\SmashModLoader.pdb
 C:\Users\jaide\OneDrive\Desktop\New folder\Microsoft.CSharp.dll
 C:\Users\jaide\OneDrive\Desktop\New folder\Microsoft.VisualBasic.Core.dll
 C:\Users\jaide\OneDrive\Desktop\New folder\Microsoft.Win32.Primitives.dll

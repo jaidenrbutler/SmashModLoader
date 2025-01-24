@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\UI.csproj",
-      "projectName": "UI",
-      "projectPath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SmashModLoader.csproj",
+      "projectName": "SmashModLoader",
+      "projectPath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SmashModLoader.csproj",
       "packagesPath": "C:\\Users\\jaide\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\obj\\",
       "projectStyle": "PackageReference",

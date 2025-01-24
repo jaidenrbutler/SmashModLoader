@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Configuration;
 
-namespace UI
+namespace SmashModLoader
 {
     public partial class SmashModManager : Form
     {
@@ -31,7 +31,10 @@ namespace UI
             modFolder = Path.Combine(appDataPath, @"yuzu\sdmc\ultimate\mods\");
             disabledFolderPath = Path.Combine(modFolder, "disabled");
             pluginFolder = Path.Combine(appDataPath, @"yuzu\sdmc\atmosphere\contents\01006A800016E000\romfs\skyline\plugins\");
-            disabledPluginPath = Path.Combine(pluginFolder, "disabled");
+            disabledPluginPath = Path.Combine(appDataPath, @"yuzu\sdmc\atmosphere\contents\01006A800016E000\romfs\skyline\disabled\");
+
+            Console.WriteLine("Plugin Folder: " + pluginFolder);
+            Console.WriteLine("Disabled Plugin Path: " + disabledPluginPath);
         }
 
         private void EnsureDisabledFolderExists()
@@ -465,6 +468,40 @@ namespace UI
             {
                 MessageBox.Show($"Failed to launch Yuzu: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ListViewMods.SelectedItems.Count > 0)
+            {
+                string selectedItem = ListViewMods.SelectedItems[0].Text;
+                string modName = selectedItem.Replace(" (Enabled)", "").Replace(" (Disabled)", "");
+
+                string modPath = Path.Combine(modFolder, modName);
+
+                if (Directory.Exists(modPath))
+                {
+                    // want to ask user to confirm delete
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this mod?", "Delete Mod", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        Directory.Delete(modPath, true);
+                        LoadMods();
+                    } else
+                    {
+                        MessageBox.Show("Mod was not deleted");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mod not found!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No mod selected!");
+            }
+
         }
     }
 }

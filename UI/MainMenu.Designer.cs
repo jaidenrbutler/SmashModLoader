@@ -1,4 +1,4 @@
-﻿namespace UI
+﻿namespace SmashModLoader
 {
     partial class SmashModManager
     {
@@ -47,6 +47,7 @@
             ImportMod = new Button();
             Enable = new ToolStripMenuItem();
             Disable = new ToolStripMenuItem();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
             contextMenuStrip2.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
@@ -158,21 +159,21 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { enableToolStripMenuItem, disableToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { enableToolStripMenuItem, disableToolStripMenuItem, deleteToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(113, 48);
+            contextMenuStrip1.Size = new Size(181, 92);
             // 
             // enableToolStripMenuItem
             // 
             enableToolStripMenuItem.Name = "enableToolStripMenuItem";
-            enableToolStripMenuItem.Size = new Size(112, 22);
+            enableToolStripMenuItem.Size = new Size(180, 22);
             enableToolStripMenuItem.Text = "Enable";
             enableToolStripMenuItem.Click += enableToolStripMenuItem_Click;
             // 
             // disableToolStripMenuItem
             // 
             disableToolStripMenuItem.Name = "disableToolStripMenuItem";
-            disableToolStripMenuItem.Size = new Size(112, 22);
+            disableToolStripMenuItem.Size = new Size(180, 22);
             disableToolStripMenuItem.Text = "Disable";
             disableToolStripMenuItem.Click += disableToolStripMenuItem_Click_1;
             // 
@@ -197,6 +198,13 @@
             Disable.Name = "Disable";
             Disable.Size = new Size(180, 22);
             Disable.Text = "Disable";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(180, 22);
+            deleteToolStripMenuItem.Text = "Delete";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
             // SmashModManager
             // 
@@ -237,5 +245,6 @@
         private ContextMenuStrip contextMenuStrip2;
         private ToolStripMenuItem enableToolStripMenuItem1;
         private ToolStripMenuItem disableToolStripMenuItem1;
+        private ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

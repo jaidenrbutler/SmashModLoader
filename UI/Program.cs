@@ -1,4 +1,4 @@
-namespace UI
+namespace SmashModLoader
 {
     internal static class Program
     {

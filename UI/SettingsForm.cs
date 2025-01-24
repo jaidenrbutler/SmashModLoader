@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI
+namespace SmashModLoader
 {
     public partial class SettingsForm : Form
     {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jVvtD77zhTtcwSV8SR8QqtCgluoaVZYLW/Z9CFq7eiVu2KSJ75FwVR+/y1lCUyIAf9jMq19kQhakRmDeTY3DBA==",
+  "dgSpecHash": "hf7Erz/2WjhW+OBfw6Vp5dblOdFQ/N57dybsyFXwUny/biTFHlLd0wE5xFLCDJ2DrrEeOziHul17Lr3a0VfLcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\UI.csproj",
+  "projectFilePath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SmashModLoader.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jaide\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.2\\microsoft.netcore.app.runtime.win-x86.8.0.2.nupkg.sha512",
     "C:\\Users\\jaide\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.2\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.2.nupkg.sha512",

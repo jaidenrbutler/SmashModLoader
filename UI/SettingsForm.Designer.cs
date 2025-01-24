@@ -1,4 +1,4 @@
-﻿namespace UI
+﻿namespace SmashModLoader
 {
     partial class SettingsForm
     {

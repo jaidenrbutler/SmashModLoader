@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmashModLoader", "UI\SmashModLoader.csproj", "{1AF7E4BA-5CE8-4178-9DDB-2F541766C29E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
