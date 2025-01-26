@@ -1,3 +1,10 @@
+// TODO: in order
+// Search and filter
+// Better error logging
+// Drag and drop mod import
+// Dark Mode
+// Better notifications and loading symbols
+
 using System.Runtime.CompilerServices;
 using System;
 using System.IO.Compression;
@@ -23,6 +30,7 @@ namespace SmashModLoader
             EnsureDisabledFolderExists();
             LoadMods();
             LoadPlugins();
+            TotalModCount();
         }
 
         private void SetModFolderPaths()
@@ -63,7 +71,7 @@ namespace SmashModLoader
             }
         }
 
-        private void ImportMod_Click(object sender, EventArgs e)
+        private async void ImportMod_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog fileBrowser = new OpenFileDialog())
             {
@@ -73,9 +81,29 @@ namespace SmashModLoader
 
                 if (fileBrowser.ShowDialog() == DialogResult.OK)
                 {
+                    ImportProgressBar.Visible = true;
+                    ImportProgressBar.Style = ProgressBarStyle.Marquee;
+
+
                     // Path of the file
                     var filePath = fileBrowser.FileName;
-                    extractModToModFolder(filePath);
+
+                    try
+                    {
+                        await Task.Run(() => extractModToModFolder(filePath));
+
+                        MessageBox.Show("Mod imported successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Failed to import mod: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        // Hide the progress bar after the operation
+                        ImportProgressBar.Visible = false;
+                    }
+
                 }
             }
         }
@@ -117,7 +145,7 @@ namespace SmashModLoader
                     }
                 }
 
-                MessageBox.Show("Mod imported successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception ex)
             {
@@ -136,12 +164,82 @@ namespace SmashModLoader
             }
         }
 
+        private void ExportModsAndPlugins(string exportPath)
+        {
+            try
+            {
+                // Temp folder to org mods and plugins
+                string tempFolder = Path.Combine(Path.GetTempPath(), "ModsAndPluginsExport");
+
+                // Ensure the temp folder is empty
+                if (Directory.Exists(tempFolder))
+                    Directory.Delete(tempFolder, true);
+                Directory.CreateDirectory(tempFolder);
+
+                // Copy mods to the temp folder
+                if (Directory.Exists(modFolder))
+                {
+                    CopyDirectory(modFolder, tempFolder);
+                }
+
+                // Copy plugins to the temp folder
+                if (Directory.Exists(pluginFolder))
+                {
+                    CopyDirectory(pluginFolder, tempFolder);
+                }
+
+                // Create the ZIP file
+                if (File.Exists(exportPath))
+                    File.Delete(exportPath);
+                ZipFile.CreateFromDirectory(tempFolder, exportPath);
+
+                // Clean up the temp folder
+                Directory.Delete(tempFolder, true);
+
+                MessageBox.Show($"Mods and plugins have been successfully exported to: {exportPath} ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occured while exporting mods and plugins: {ex.Message} ");
+            }
+        }
+
+        private void CopyDirectory(string sourceDir, string targetDir)
+        {
+            Directory.CreateDirectory(targetDir);
+
+            // copy all files
+            foreach (string file in Directory.GetFiles(sourceDir))
+            {
+                string targetFile = Path.Combine(targetDir, Path.GetFileName(file));
+                File.Copy(file, targetFile, true);
+            }
+
+            // Recursively copy subdirectories
+            foreach (string directory in Directory.GetDirectories(sourceDir))
+            {
+                string targetSubDir = Path.Combine(targetDir, Path.GetFileName(directory));
+                CopyDirectory(directory, targetSubDir);
+            }
+        }
+
+
+
+
         /// <summary>
         /// Gets the names of the directories in the mod folder and adds them to a list view
         /// </summary>
         /// <param name="folderPath"></param>
         private void LoadMods()
         {
+            if (ListViewMods.InvokeRequired)
+            {
+                // Invoke the method on the UI thread
+                ListViewMods.Invoke(new MethodInvoker(LoadMods));
+                return;
+            }
+
+            // Clear the ListViewMods before reloading
             ListViewMods.Items.Clear();
 
             // Check if the mod folder exists before trying to list directories
@@ -171,13 +269,23 @@ namespace SmashModLoader
                     ListViewMods.Items.Add(Path.GetFileName(folder) + " (Disabled)");
                 }
             }
+            TotalModCount();
         }
+
 
         private void LoadPlugins()
         {
+            if (ListViewPlugins.InvokeRequired)
+            {
+                // Switch to the UI thread if necessary
+                ListViewPlugins.Invoke(new MethodInvoker(LoadPlugins));
+                return;
+            }
+
+            // Clear the ListViewPlugins before reloading
             ListViewPlugins.Items.Clear();
 
-
+            // Check if the plugin folder exists before trying to list files
             if (Directory.Exists(pluginFolder))
             {
                 foreach (var file in Directory.GetFiles(pluginFolder))
@@ -186,6 +294,7 @@ namespace SmashModLoader
                 }
             }
 
+            // Check if the disabled plugin folder exists before trying to list files
             if (Directory.Exists(disabledPluginPath))
             {
                 foreach (var file in Directory.GetFiles(disabledPluginPath))
@@ -193,6 +302,7 @@ namespace SmashModLoader
                     ListViewPlugins.Items.Add(Path.GetFileName(file) + " (Disabled)");
                 }
             }
+            TotalModCount();
         }
 
         #region Enable and disabling mods
@@ -487,7 +597,8 @@ namespace SmashModLoader
                     {
                         Directory.Delete(modPath, true);
                         LoadMods();
-                    } else
+                    }
+                    else
                     {
                         MessageBox.Show("Mod was not deleted");
                     }
@@ -501,7 +612,76 @@ namespace SmashModLoader
             {
                 MessageBox.Show("No mod selected!");
             }
+        }
 
+        private void deleteToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            if (ListViewPlugins.Items.Count > 0)
+            {
+                string selectedItem = ListViewPlugins.SelectedItems[0].Text;
+                string pluginName = selectedItem.Replace(" (Enabled)", "").Replace(" (Disabled)", "");
+
+                string pluginPath = Path.Combine(pluginFolder, pluginName);
+
+                if (File.Exists(pluginPath))
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this plugin?", "Delete Mod", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        File.Delete(pluginPath);
+                        LoadPlugins();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Plugin was not deleted");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Plugin was not found");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No plugin was selected");
+            }
+        }
+
+        private void TotalModCount()
+        {
+            TotalModsLabel.Text = "Total Mods: " + ListViewMods.Items.Count.ToString();
+            TotalPluginsLabel.Text = "Total Plugins: " + ListViewPlugins.Items.Count.ToString();
+        }
+
+        private async void exportModsButton_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                ImportProgressBar.Visible = true;
+                ImportProgressBar.Style = ProgressBarStyle.Marquee;
+                
+                saveFileDialog.Filter = "ZIP files (*zip)|*.zip";
+                saveFileDialog.Title = "Export Mods and Plugins";
+                saveFileDialog.FileName = "ModsAndPlugins.zip";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        await Task.Run(() => ExportModsAndPlugins(saveFileDialog.FileName));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+
+                ImportProgressBar.Visible = false;
+
+
+
+
+            }
         }
     }
 }

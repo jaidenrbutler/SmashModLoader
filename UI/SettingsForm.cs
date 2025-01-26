@@ -12,9 +12,17 @@ namespace SmashModLoader
 {
     public partial class SettingsForm : Form
     {
-        public string YuzuFolderPath { get; private set; }
-        public string YuzuExePath { get; private set; }
-        public string SmashIsoPath { get; private set; }
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string SmashIsoPath { get; set; }
+
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string YuzuFolderPath { get; set; }
+
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string YuzuExePath { get; set; }
 
         public SettingsForm(string currentYuzuFolder, string currentYuzuExePath, string currentSmashIsoPath)
         {

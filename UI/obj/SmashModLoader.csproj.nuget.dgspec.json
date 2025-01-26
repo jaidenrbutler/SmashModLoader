@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SmashModLoader.csproj": {}
+    "C:\\Users\\jaide\\OneDrive\\Desktop\\Smash Ult\\Mod Manager Source Code\\UI\\SmashModLoader.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SmashModLoader.csproj": {
+    "C:\\Users\\jaide\\OneDrive\\Desktop\\Smash Ult\\Mod Manager Source Code\\UI\\SmashModLoader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SmashModLoader.csproj",
+        "projectUniqueName": "C:\\Users\\jaide\\OneDrive\\Desktop\\Smash Ult\\Mod Manager Source Code\\UI\\SmashModLoader.csproj",
         "projectName": "SmashModLoader",
-        "projectPath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\SmashModLoader.csproj",
+        "projectPath": "C:\\Users\\jaide\\OneDrive\\Desktop\\Smash Ult\\Mod Manager Source Code\\UI\\SmashModLoader.csproj",
         "packagesPath": "C:\\Users\\jaide\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaide\\OneDrive\\Documents\\.projects\\SmashModLoader\\UI\\obj\\",
+        "outputPath": "C:\\Users\\jaide\\OneDrive\\Desktop\\Smash Ult\\Mod Manager Source Code\\UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0-windows"
+          "net9.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-windows7.0": {
-            "targetAlias": "net8.0-windows",
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
             "projectReferences": {}
           }
         },
@@ -44,11 +44,12 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
           "imports": [
             "net461",
             "net462",
@@ -68,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

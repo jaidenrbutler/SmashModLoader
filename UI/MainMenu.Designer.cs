@@ -34,20 +34,25 @@
             Settings = new Button();
             Launch = new Button();
             groupBox1 = new GroupBox();
+            TotalPluginsLabel = new Label();
+            TotalModsLabel = new Label();
+            ImportProgressBar = new ProgressBar();
             ListViewPlugins = new ListView();
             Plugins = new ColumnHeader();
             contextMenuStrip2 = new ContextMenuStrip(components);
             enableToolStripMenuItem1 = new ToolStripMenuItem();
             disableToolStripMenuItem1 = new ToolStripMenuItem();
+            deleteToolStripMenuItem1 = new ToolStripMenuItem();
             ListViewMods = new ListView();
             columnHeader1 = new ColumnHeader();
             contextMenuStrip1 = new ContextMenuStrip(components);
             enableToolStripMenuItem = new ToolStripMenuItem();
             disableToolStripMenuItem = new ToolStripMenuItem();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
             ImportMod = new Button();
             Enable = new ToolStripMenuItem();
             Disable = new ToolStripMenuItem();
-            deleteToolStripMenuItem = new ToolStripMenuItem();
+            exportModsButton = new Button();
             groupBox1.SuspendLayout();
             contextMenuStrip2.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
@@ -95,6 +100,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(TotalPluginsLabel);
+            groupBox1.Controls.Add(TotalModsLabel);
+            groupBox1.Controls.Add(ImportProgressBar);
             groupBox1.Controls.Add(ListViewPlugins);
             groupBox1.Controls.Add(ListViewMods);
             groupBox1.Location = new Point(12, 79);
@@ -102,7 +110,32 @@
             groupBox1.Size = new Size(776, 365);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            // 
+            // TotalPluginsLabel
+            // 
+            TotalPluginsLabel.AutoSize = true;
+            TotalPluginsLabel.Location = new Point(410, 0);
+            TotalPluginsLabel.Name = "TotalPluginsLabel";
+            TotalPluginsLabel.Size = new Size(80, 15);
+            TotalPluginsLabel.TabIndex = 4;
+            TotalPluginsLabel.Text = "Total Plugins: ";
+            // 
+            // TotalModsLabel
+            // 
+            TotalModsLabel.AutoSize = true;
+            TotalModsLabel.Location = new Point(0, 0);
+            TotalModsLabel.Name = "TotalModsLabel";
+            TotalModsLabel.Size = new Size(68, 15);
+            TotalModsLabel.TabIndex = 3;
+            TotalModsLabel.Text = "Total Mods:";
+            // 
+            // ImportProgressBar
+            // 
+            ImportProgressBar.Location = new Point(189, 159);
+            ImportProgressBar.Name = "ImportProgressBar";
+            ImportProgressBar.Size = new Size(386, 23);
+            ImportProgressBar.TabIndex = 2;
+            ImportProgressBar.Visible = false;
             // 
             // ListViewPlugins
             // 
@@ -122,9 +155,9 @@
             // 
             // contextMenuStrip2
             // 
-            contextMenuStrip2.Items.AddRange(new ToolStripItem[] { enableToolStripMenuItem1, disableToolStripMenuItem1 });
+            contextMenuStrip2.Items.AddRange(new ToolStripItem[] { enableToolStripMenuItem1, disableToolStripMenuItem1, deleteToolStripMenuItem1 });
             contextMenuStrip2.Name = "contextMenuStrip2";
-            contextMenuStrip2.Size = new Size(113, 48);
+            contextMenuStrip2.Size = new Size(113, 70);
             // 
             // enableToolStripMenuItem1
             // 
@@ -139,6 +172,13 @@
             disableToolStripMenuItem1.Size = new Size(112, 22);
             disableToolStripMenuItem1.Text = "Disable";
             disableToolStripMenuItem1.Click += disableToolStripMenuItem1_Click;
+            // 
+            // deleteToolStripMenuItem1
+            // 
+            deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
+            deleteToolStripMenuItem1.Size = new Size(112, 22);
+            deleteToolStripMenuItem1.Text = "Delete";
+            deleteToolStripMenuItem1.Click += deleteToolStripMenuItem1_Click_1;
             // 
             // ListViewMods
             // 
@@ -161,21 +201,28 @@
             // 
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { enableToolStripMenuItem, disableToolStripMenuItem, deleteToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(181, 92);
+            contextMenuStrip1.Size = new Size(113, 70);
             // 
             // enableToolStripMenuItem
             // 
             enableToolStripMenuItem.Name = "enableToolStripMenuItem";
-            enableToolStripMenuItem.Size = new Size(180, 22);
+            enableToolStripMenuItem.Size = new Size(112, 22);
             enableToolStripMenuItem.Text = "Enable";
             enableToolStripMenuItem.Click += enableToolStripMenuItem_Click;
             // 
             // disableToolStripMenuItem
             // 
             disableToolStripMenuItem.Name = "disableToolStripMenuItem";
-            disableToolStripMenuItem.Size = new Size(180, 22);
+            disableToolStripMenuItem.Size = new Size(112, 22);
             disableToolStripMenuItem.Text = "Disable";
             disableToolStripMenuItem.Click += disableToolStripMenuItem_Click_1;
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(112, 22);
+            deleteToolStripMenuItem.Text = "Delete";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
             // ImportMod
             // 
@@ -199,18 +246,22 @@
             Disable.Size = new Size(180, 22);
             Disable.Text = "Disable";
             // 
-            // deleteToolStripMenuItem
+            // exportModsButton
             // 
-            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(180, 22);
-            deleteToolStripMenuItem.Text = "Delete";
-            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
+            exportModsButton.Location = new Point(436, 13);
+            exportModsButton.Name = "exportModsButton";
+            exportModsButton.Size = new Size(100, 60);
+            exportModsButton.TabIndex = 6;
+            exportModsButton.Text = "Export Mods to Zip";
+            exportModsButton.UseVisualStyleBackColor = true;
+            exportModsButton.Click += exportModsButton_Click;
             // 
             // SmashModManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(exportModsButton);
             Controls.Add(ImportMod);
             Controls.Add(groupBox1);
             Controls.Add(Launch);
@@ -220,6 +271,7 @@
             Name = "SmashModManager";
             Text = "SSBU Mod Manager";
             groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             contextMenuStrip2.ResumeLayout(false);
             contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
@@ -246,5 +298,10 @@
         private ToolStripMenuItem enableToolStripMenuItem1;
         private ToolStripMenuItem disableToolStripMenuItem1;
         private ToolStripMenuItem deleteToolStripMenuItem;
+        private ProgressBar ImportProgressBar;
+        private Label TotalModsLabel;
+        private Label TotalPluginsLabel;
+        private ToolStripMenuItem deleteToolStripMenuItem1;
+        private Button exportModsButton;
     }
 }
